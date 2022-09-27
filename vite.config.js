@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vue-example-pwa/',
   plugins: [
     vue(),
     VitePWA({
@@ -21,9 +22,9 @@ export default defineConfig({
         name: 'My Vue App',
         short_name: 'VueApp',
         description: 'My Awesome App description',
-        start_url: "/?source=pwa",
-        scope: "/",
-        display: "standalone",
+        start_url: "/vue-example-pwa/?source=pwa",
+        scope: "/vue-example-pwa/",
+        display: "fullscrene",
         orientation: "portrait",
         theme_color: '#121212',
         categories: [
@@ -31,12 +32,12 @@ export default defineConfig({
         ],
         icons: [
           {
-            src: 'src/assets/vue-192x192.png',
+            src: 'vue-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'src/assets/vue-512x512.png',
+            src: 'vue-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -46,10 +47,10 @@ export default defineConfig({
             "name": "Home",
             "short_name": "Home",
             "description": "My Home Page",
-            "url": "/",
+            "url": "/vue-example-pwa/",
             "icons": [
               {
-                "src": "/src/assets/home-192x192.png",
+                "src": "home-192x192.png",
                 "sizes": "192x192"
               }
             ]
@@ -58,10 +59,10 @@ export default defineConfig({
             "name": "About",
             "short_name": "About",
             "description": "My About Page",
-            "url": "/about",
+            "url": "/vue-example-pwa/about",
             "icons": [
               {
-                "src": "/src/assets/about-192x192.png",
+                "src": "about-192x192.png",
                 "sizes": "192x192"
               }
             ]
@@ -69,12 +70,12 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            "src": "src/assets/vue-home.png",
+            "src": "vue-home.png",
             "sizes": "400x865",
             "type": "image/png"
           },
           {
-            "src": "src/assets/vue-about.png",
+            "src": "vue-about.png",
             "sizes": "400x865",
             "type": "image/png"
           },
